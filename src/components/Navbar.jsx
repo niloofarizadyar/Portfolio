@@ -27,8 +27,8 @@ const Navbar = () => {
   const [ active, setActive ] = useState(false)
 
   return (
-      <div className='absolute bg-red-600 flex items-center w-full h-14'>
-        <div className='bg-blue-600 flex-1 p-2'>
+      <div className='absolute flex items-center w-full px-5 h-14 z-10'>
+        <div className='flex-1 p-2'>
           logo
         </div>
         <div className='hidden md:block flex-none flex justify-end items-center'>
