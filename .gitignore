@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# statics files
+/src/assets/
+
 # testing
 /coverage
 
