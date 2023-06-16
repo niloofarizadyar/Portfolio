@@ -1,48 +1,85 @@
-import React, {useState} from 'react'
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import { motion } from 'framer-motion'
+import React, { useState } from "react";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { motion } from "framer-motion";
+
+const navbarVariant = {
+  hidden: {
+    opacity: 0,
+    y: -20,
+    transition: {
+      stiffness: 50,
+    },
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      stiffness: 1,
+      delay: 0.5,
+    },
+  },
+};
 
 const NavigationItem = ({ href, text }) => {
   return (
-      <a href={href} className='text-center w-full p-3 hover:bg-black hover:text-lightRoseBrown transition-colors duration-500 ease-in-out rounded'>{text}</a>
+    <a
+      href={href}
+      className="text-center w-full p-3 hover:bg-black hover:text-lightRoseBrown transition-colors duration-500 ease-in-out rounded"
+    >
+      {text}
+    </a>
   );
 };
 
-const MenuItems = ({active}) => {
-  return(
+const MenuItems = ({ active }) => {
+  return (
     //transition is not working !
-    <div className={`transition-opacity duration-1000 ease-in-out ${active ? 'opacity-100' : 'opacity-0'} `}>
-      <div className='rounded shadow bg-black bg-opacity-40 backdrop-blur-sm flex flex-col w-36 items-center absolute right-0 top-14 md:hidden'> 
+    <div
+      className={`transition-opacity duration-1000 ease-in-out ${
+        active ? "opacity-100" : "opacity-0"
+      } `}
+    >
+      <div className="rounded shadow bg-black bg-opacity-40 backdrop-blur-sm flex flex-col w-36 items-center absolute right-0 top-14 md:hidden">
         <NavigationItem href="#about" text="About" />
         <NavigationItem href="#skills" text="Skills" />
         <NavigationItem href="#collections" text="Collections" />
         <NavigationItem href="#contact" text="Contact Us" />
-        </div> 
+      </div>
     </div>
-  )
-}
+  );
+};
 
 const Navbar = () => {
-  const [ active, setActive ] = useState(false)
+  const [active, setActive] = useState(false);
 
   return (
-      <div className='absolute flex items-center w-full px-5 h-14 z-10'>
-        <div className='flex-1 p-2'>
-          logo
-        </div>
-        <div className='hidden md:block flex-none flex justify-end items-center'>
-          <NavigationItem href="#about" text="About" />
-          <NavigationItem href="#skills" text="Skills" />
-          <NavigationItem href="#collections" text="Collections" />
-          <NavigationItem href="#contact" text="Contact Us" />
-        </div>
-        <div className='md:hidden cursor-pointer' onClick={()=>setActive(!active)}>
-          { !active ? <MenuIcon className='text-lightRoseBrown'/> : <CloseIcon className='text-lightRoseBrown'/>}  
-        </div>
-        { active && <MenuItems active={active} />}
-      </div>  
-  )
-}
+    <motion.div
+      variants={navbarVariant}
+      initial="hidden"
+      whileInView="show"
+      className="absolute flex items-center w-full px-5 h-14 z-10"
+    >
+      <div className="flex-1 p-2">logo</div>
+      <div className="hidden md:block flex-none flex justify-end items-center">
+        <NavigationItem href="#about" text="About" />
+        <NavigationItem href="#skills" text="Skills" />
+        <NavigationItem href="#collections" text="Collections" />
+        <NavigationItem href="#contact" text="Contact Us" />
+      </div>
+      <div
+        className="md:hidden cursor-pointer"
+        onClick={() => setActive(!active)}
+      >
+        {!active ? (
+          <MenuIcon className="text-lightRoseBrown" />
+        ) : (
+          <CloseIcon className="text-lightRoseBrown" />
+        )}
+      </div>
+      {active && <MenuItems active={active} />}
+    </motion.div>
+  );
+};
 
-export default Navbar
+export default Navbar;
