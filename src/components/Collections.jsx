@@ -2,7 +2,7 @@ import React from 'react'
 
 const Collections = () => {
   return (
-    <div>Collections</div>
+    <div className='py-[40px] p-3'>Collections</div>
   )
 }
 

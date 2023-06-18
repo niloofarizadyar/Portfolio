@@ -52,7 +52,7 @@ export const staggerContainer = (staggerChildren, delayChildren) => ({
 
 const About = () => {
   return (
-    <div id="about" className="flex flex-wrap justify-center gap-2 w-full p-3">
+    <div id="about" className="flex flex-wrap justify-center gap-2 w-full p-3 py-[40px]">
       <motion.img
         variants={imageVariant}
         initial="hidden"

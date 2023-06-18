@@ -8,6 +8,7 @@ module.exports = {
       colors:{
         lightRoseBrown:"#C99A9A",
         darkRoseBrown:"#A06E6E",
+        oddBgColor:"#101010"
       },
     },
   },
