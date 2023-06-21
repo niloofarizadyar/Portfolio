@@ -44,7 +44,7 @@ const MenuItems = ({ active }) => {
         <NavigationItem href="#about" text="About" />
         <NavigationItem href="#skills" text="Skills" />
         <NavigationItem href="#collections" text="Collections" />
-        <NavigationItem href="#contact" text="Contact Us" />
+        <NavigationItem href="#contact" text="Contact Me" />
       </div>
     </div>
   );
@@ -65,7 +65,7 @@ const Navbar = () => {
         <NavigationItem href="#about" text="About" />
         <NavigationItem href="#skills" text="Skills" />
         <NavigationItem href="#collections" text="Collections" />
-        <NavigationItem href="#contact" text="Contact Us" />
+        <NavigationItem href="#contact" text="Contact Me" />
       </div>
       <div
         className="md:hidden cursor-pointer"
