@@ -22,7 +22,7 @@ const imageVariant = {
 
 const Contact = () => {
   return (
-    <div className='bg-oddBgColor py-[40px] p-3'>
+    <div id='contact' className='bg-oddBgColor py-[40px] p-3'>
       <p className="font-bold text-[30px] text-lightRoseBrown pb-3 text-center">
         Contact Me
       </p>
