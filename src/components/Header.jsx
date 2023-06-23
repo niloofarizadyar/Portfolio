@@ -39,7 +39,7 @@ const Header = () => {
         </p>
         {/* href should be changed to download link. */}
         <a target="_blank" href="https://www.google.com/">
-          <button className="text-[10px] text-black font-semibold md:text-sm text-center p-2 mt-2 bg-lightRoseBrown hover:bg-darkRoseBrown transition-colors duration-500 ease-in-out rounded">
+          <button className="text-[10px] text-black font-semibold md:text-sm text-center p-2 px-4 mt-2 bg-lightRoseBrown hover:bg-darkRoseBrown transition-colors duration-500 ease-in-out rounded">
             Download CV
           </button>
         </a>

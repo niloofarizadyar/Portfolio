@@ -1,2 +1,6 @@
 export { default as IsTypingText } from './IsTypingText'
 export { default as ItemSkill } from './ItemSkill'
+export { default as FormContainer } from './FormContainer'
+export { default as InputForm } from './InputForm'
+export { default as SelectForm } from './SelectForm'
+export { default as TextareaForm } from './TextareaForm'

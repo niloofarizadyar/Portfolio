@@ -1,4 +1,5 @@
 import React from 'react'
+import { FormContainer } from '../containers';
 import { motion } from "framer-motion";
 
 const imageVariant = {
@@ -26,7 +27,7 @@ const Contact = () => {
         Contact Me
       </p>
       <div className='flex flex-wrap justify-center gap-2 w-full p-3 py-[40px]'>
-        <div className='w-[200px] h-[300px] object-cover bg-slate-600'>
+        <div className='w-[500px] h-[450px] object-cover bg-slate-600'>
           picture
           {/* <motion.img
             variants={imageVariant}
@@ -36,8 +37,8 @@ const Contact = () => {
             className="w-[200px] h-[300px] object-cover"
           /> */}
         </div>
-        <div className='p-2 text-justify w-[500px] bg-red-500'>
-          form
+        <div className='p-2 text-justify w-[500px]'>
+          <FormContainer />
         </div>
       </div>
     </div>

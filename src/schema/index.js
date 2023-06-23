@@ -8,6 +8,6 @@ export const schema = yup.object().shape({
   email: yup.string().email("Please enter a valid email address"),
   type: yup
     .string()
-    .oneOf(["card", "catalog", "video", "other"], "Invalid job type"),
+    .oneOf(["card", "catalog", "video", "other"], "Invalid job type").required("Required"),
   description: yup.string().required("Required"),
 });
