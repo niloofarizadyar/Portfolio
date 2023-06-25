@@ -58,7 +58,7 @@ const Navbar = () => {
       className="absolute flex items-center w-full px-5 h-14 z-10"
     >
       <div className="flex-1 p-2">
-        <img className="w-[50px]" src={navbarLogo} />
+        <img className="w-[40px] md:w-[50px]" src={navbarLogo} />
       </div>
       <div className="hidden md:block flex-none flex justify-end items-center">
         <NavigationItem href="#about" text="About" />
