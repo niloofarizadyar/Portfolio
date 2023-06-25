@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import navbarLogo from './../assets/Logo.png'
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import { motion } from "framer-motion";
@@ -34,12 +35,8 @@ const NavigationItem = ({ href, text }) => {
 
 const MenuItems = ({ active }) => {
   return (
-    //transition is not working !
-    <div
-      className={`transition-opacity duration-1000 ease-in-out ${
-        active ? "opacity-100" : "opacity-0"
-      } `}
-    >
+    
+    <div>
       <div className="rounded shadow bg-black bg-opacity-40 backdrop-blur-sm flex flex-col w-36 items-center absolute right-0 top-14 md:hidden">
         <NavigationItem href="#about" text="About" />
         <NavigationItem href="#skills" text="Skills" />
@@ -60,7 +57,9 @@ const Navbar = () => {
       whileInView="show"
       className="absolute flex items-center w-full px-5 h-14 z-10"
     >
-      <div className="flex-1 p-2">logo</div>
+      <div className="flex-1 p-2">
+        <img className="w-[50px]" src={navbarLogo} />
+      </div>
       <div className="hidden md:block flex-none flex justify-end items-center">
         <NavigationItem href="#about" text="About" />
         <NavigationItem href="#skills" text="Skills" />
