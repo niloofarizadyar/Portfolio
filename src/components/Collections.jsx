@@ -11,7 +11,10 @@ const Collections = () => {
   };
 
   return (
-    <div id="collections" className="py-[40px] p-3 flex justify-center flex-col">
+    <div
+      id="collections"
+      className="py-[40px] p-3 flex justify-center flex-col"
+    >
       <p className="font-bold text-[30px] text-lightRoseBrown pb-3 text-center">
         Collections
       </p>

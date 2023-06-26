@@ -1,12 +1,16 @@
 import React from "react";
+import { videos } from "./../assets/Contents";
 
 const Videos = () => {
   return (
     <div className="py-[40px] p-3 flex justify-center">
-      <iframe
-        src="https://drive.google.com/file/d/1N7vbvF8Ere0x6jYj3irfXXHHWumlxM4y/preview"
-        className="w-[750px] h-[450px]"
-      ></iframe>
+      {videos.map((item) => (
+        <iframe
+          key={item.id}
+          src={item.src}
+          className="w-[750px] h-[450px]"
+        ></iframe>
+      ))}
     </div>
   );
 };
