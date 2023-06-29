@@ -38,9 +38,9 @@ const Header = () => {
           I'm <span className="text-darkRoseBrown">Freelancer Designer</span>.
         </p>
         {/* href should be changed to download link. */}
-        <a target="_blank" href="https://www.google.com/">
+        <a target="_blank" href="https://drive.google.com/file/d/1jctO8hEY9WjZjeKEF3aaeEaJwQMsjO_7/view?usp=sharing">
           <button className="text-[10px] text-black font-semibold md:text-sm text-center p-2 px-4 mt-2 bg-lightRoseBrown hover:bg-darkRoseBrown transition-colors duration-500 ease-in-out rounded">
-            Download CV
+            Get CV
           </button>
         </a>
       </motion.div>
