@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
-const Slider = ({catalog}) => {
+const Slider = ({ catalog }) => {
   const [current, setCurrent] = useState(0);
 
   const prev = () => {
@@ -18,7 +19,7 @@ const Slider = ({catalog}) => {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {catalog.map((item) => (
-          <img
+          <LazyLoadImage
             key={item.id}
             src={item.src}
             className="w-[300px] md:w-[400px]"
