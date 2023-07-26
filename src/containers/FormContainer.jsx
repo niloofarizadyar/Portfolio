@@ -13,7 +13,7 @@ const onSubmit = async (values, actions) => {
   actions.resetForm();
   //put your own url
   axios.post(
-      "https://sheet.best/api/sheets/95fd3cdf-9b74-47e1-a952-816ae00f5b94",
+      "YOUR URL",
       {
         name: values.name,
         email: values.email,
